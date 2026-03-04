@@ -32,3 +32,10 @@
 ## Section 7: App-only rebuild — BLOCKED (needs Section 6)
 - However, runners are ALREADY registered via App-only, so the re-registration
   step is effectively already proven
+
+## Ralph Loop Status — STALLED (iteration 10)
+- Blocked since iteration 3 on PAT permissions
+- Two PATs exist:
+  - `gh auth token`: `github_pat_11AAATR7Q0hL1DMJ...` — can see org, cannot manage runners or create repos
+  - `config/runnermatic-admin.pat`: `github_pat_11AAATR7Q0Zihsis...` — appears invalid (returns null user)
+- To resume: update PAT with Administration:Write + Self-hosted runners:Write org permissions, then re-run Ralph loop
