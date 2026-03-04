@@ -1,0 +1,45 @@
+name: Four Runners Test
+
+on:
+  workflow_dispatch:
+
+jobs:
+  job-1:
+    runs-on: [self-hosted, lab]
+    steps:
+      - name: Report
+        run: |
+          echo "Job: job-1"
+          echo "Runner: ${{ runner.name }}"
+          echo "Hostname: $(hostname)"
+          sleep 10
+
+  job-2:
+    runs-on: [self-hosted, lab]
+    steps:
+      - name: Report
+        run: |
+          echo "Job: job-2"
+          echo "Runner: ${{ runner.name }}"
+          echo "Hostname: $(hostname)"
+          sleep 10
+
+  job-3:
+    runs-on: [self-hosted, lab]
+    steps:
+      - name: Report
+        run: |
+          echo "Job: job-3"
+          echo "Runner: ${{ runner.name }}"
+          echo "Hostname: $(hostname)"
+          sleep 10
+
+  job-4:
+    runs-on: [self-hosted, lab]
+    steps:
+      - name: Report
+        run: |
+          echo "Job: job-4"
+          echo "Runner: ${{ runner.name }}"
+          echo "Hostname: $(hostname)"
+          sleep 10
