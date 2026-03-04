@@ -1,0 +1,1 @@
+/ralph-loop "Read MISSION.md and follow it. Read NOTES.md first to see what has already done. Output <promise>MISSION COMPLETE</promise> when finished." --completion-promise "MISSION COMPLETE" --max-iterations 30

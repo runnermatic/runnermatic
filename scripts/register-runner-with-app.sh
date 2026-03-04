@@ -5,6 +5,7 @@ SCRIPT_DIR="$(cd "$(dirname "$0")" && pwd)"
 PROJECT_ROOT="$(cd "$SCRIPT_DIR/.." && pwd)"
 
 source "$PROJECT_ROOT/config/app.env"
+export GITHUB_APP_ID GITHUB_APP_PRIVATE_KEY_PATH
 
 # Generate JWT from App credentials
 JWT=$("$SCRIPT_DIR/generate-jwt.js")
