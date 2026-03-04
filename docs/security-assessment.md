@@ -233,11 +233,12 @@ If an attacker can push to a branch that triggers workflows on self-hosted runne
 
 | # | Recommendation | Priority | Effort |
 |---|---------------|----------|--------|
-| 1 | Set PEM file permissions to `chmod 600` | **Critical** | Low |
-| 2 | Restrict who can modify workflow files in repos using self-hosted runners | **High** | Low |
-| 3 | Enable branch protection on repos that trigger self-hosted runner jobs | **High** | Low |
-| 4 | Audit GitHub App permissions — confirm only Self-hosted runners R/W is granted | **High** | Low |
-| 5 | Configure runner group to restrict which repos can use self-hosted runners | **High** | Low |
+| 1 | Create an org-owned GitHub App rather than using the shared [runnermatic-tokenizer](https://github.com/apps/runnermatic-tokenizer) App. This gives your org full control over the PEM key, rotation schedule, and revocation — no dependency on an external party. The App setup takes 5 minutes with one permission (Self-hosted runners: R/W). | **Critical** | Low |
+| 2 | Set PEM file permissions to `chmod 600` | **Critical** | Low |
+| 3 | Restrict who can modify workflow files in repos using self-hosted runners | **High** | Low |
+| 4 | Enable branch protection on repos that trigger self-hosted runner jobs | **High** | Low |
+| 5 | Audit GitHub App permissions — confirm only Self-hosted runners R/W is granted | **High** | Low |
+| 6 | Configure runner group to restrict which repos can use self-hosted runners | **High** | Low |
 
 ### Short-term (within 30 days)
 

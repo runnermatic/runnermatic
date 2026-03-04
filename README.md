@@ -60,6 +60,10 @@ docs/
 
 ## GitHub App Setup
 
+**Option A: Use the existing App** — Install [runnermatic-tokenizer](https://github.com/apps/runnermatic-tokenizer) on your org. Quick and easy — same PEM key works across all installations, you just need the new Installation ID.
+
+**Option B: Create your own App** — Create a GitHub App under your own org so your team controls the PEM key, rotation, and revocation independently. This is recommended for production or if your security team requires full ownership of credentials. The setup takes 5 minutes:
+
 1. Create a GitHub App in your org with **one permission**: Organization > Self-hosted runners: Read & write
 2. Generate a private key (PEM) and note the App ID
 3. Install the App on your org and note the Installation ID
