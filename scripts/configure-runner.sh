@@ -9,7 +9,6 @@ INDEX="${2:?Usage: configure-runner.sh <pat|app> <index> [labels]}"
 LABELS="${3:-self-hosted,lab}"
 
 RUNNER_DIR="/srv/github-runner-$INDEX"
-RUNNER_NAME="runnermatic-$INDEX"
 
 if [ ! -d "$RUNNER_DIR" ]; then
   echo "ERROR: Runner directory $RUNNER_DIR does not exist" >&2
@@ -23,6 +22,7 @@ if [ -f "$RUNNER_DIR/.runner" ]; then
 fi
 
 source "$PROJECT_ROOT/config/org.env"
+RUNNER_NAME="${GITHUB_ORG}-${INDEX}"
 
 # Get registration token
 case "$MODE" in
